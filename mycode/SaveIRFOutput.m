@@ -10,7 +10,7 @@ if SolveStickyPriceTransition
         end
         irf.solnSTICKY = rmfield(irf.solnSTICKY,{'AU_T1','gamarg_T1','gbmarg_T1'});
     end    
-    if SaveCumPolicyFnsIRF
+    if SaveCumPolicyFnsIRF 
         for f = fields(irf.cumSTICKY)'
             irf.cumSTICKY.([f{1},'_T1']) = irf.cumSTICKY.(f{1}){1};
             irf.cumSTICKY = rmfield(irf.cumSTICKY,f{1});
